@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="file-manager">
+            <div class="file-manager-title">
+                <h1>Vista de Archivos</h1>
+            </div>
+            <div class="file-manager-content">
+                <div class="file-display">
+                    {{#text_files}}
+                        <p>{{.}}</p>
+                    {{/text_files}}
+                </div>
+                <p>Opciones:</p>
+                <p><a href="/">Inicio</a></p>
+                <p><a href="/create-view">Crear Archivo</a></p>
+                <p><a href="/write-view">Escribir en Archivo</a></p>
+                <p><a href="/delete-view">Eliminar Archivo</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

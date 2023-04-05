@@ -1,0 +1,124 @@
+body {
+    background-color: rgb(241, 232, 182);
+}
+
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1, p, .p, a, .a {
+    color: rgb(255, 255, 255);
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+p, .p {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+  
+h1, .h1 {
+    font-size: calc(1.375rem + 1.5vw);
+    margin: 0rem;
+}
+@media (min-width: 1200px) {
+    h1, .h1 {
+        font-size: 2.5rem;
+    }
+}
+
+h2, .h2 {
+    font-size: calc(1.325rem + 0.9vw);
+}
+@media (min-width: 1200px) {
+    h2, .h2 {
+        font-size: 2rem;
+    }
+}
+
+h3, .h3 {
+    font-size: calc(1.3rem + 0.6vw);
+}
+@media (min-width: 1200px) {
+    h3, .h3 {
+        font-size: 1.75rem;
+    }
+}
+
+h4, .h4 {
+    font-size: calc(1.275rem + 0.3vw);
+}
+@media (min-width: 1200px) {
+    h4, .h4 {
+        font-size: 1.5rem;
+    }
+}
+
+h5, .h5 {
+    font-size: 1.25rem;
+}
+
+h6, .h6 {
+    font-size: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.file-manager {
+    margin-top: 250px;
+    background-color: rgb(103, 169, 83);
+    box-shadow: 5px 5px 5px rgb(71, 95, 58);
+    border-radius: 10px;
+    width: 25%;
+}
+
+.file-manager-title {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.file-manager-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.file-display{
+    text-align: center;
+}
+
+.btn {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    border-radius: 5px;
+    border-color: rgb(125, 108, 10);
+    border: solid rgb(125, 108, 10);
+    background-color:rgb(227, 215, 145);
+    cursor: pointer;
+    color: rgb(125, 108, 10);
+    font-weight: bold;
+}
+
+.btn:active{
+    border-color: rgb(125, 108, 10);
+    border: solid rgb(125, 108, 10);
+    background-color:rgb(193, 178, 82);
+    
+    transition: all 0.2s;
+}
+
+textarea {
+    width: 10rem;
+    height: 15rem;
+    margin-bottom: 20px;
+}
+
+select {
+    width: 11rem;
+}

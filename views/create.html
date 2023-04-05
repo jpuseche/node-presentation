@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="file-manager">
+            <div class="file-manager-title">
+                <h1>Crea un Archivo .txt</h1>
+            </div>
+            <div class="file-manager-content">
+                <form action="/create-file" method="POST">
+                    <p id="fileName">Nombre de Archivo:</p>
+                    <input type="text" id="fileName" name="filename">
+                    <input class=btn type="submit" value="Crear Archivo de Texto">
+                </form>
+                <p>Opciones:</p>
+                <p><a href="/">Inicio</a></p>
+                <p><a href="/show-view">Ver Archivos</a></p>
+                <p><a href="/write-view">Escribir en Archivo</a></p>
+                <p><a href="/read-view">Leer Archivo</a></p>
+                <p><a href="/delete-view">Eliminar Archivo</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
