@@ -17,5 +17,10 @@ This is the repository for Juan Useche's node.js file manage system presentation
     npm install
     ```
     This is to load the necessary modules into your local project.
+4. Run the command:
+    ```
+    npm run dev
+    ```
+    This is to run the server after the initial listening configuration is set.
 
 With this you should be ready to attend the code along prepared for this repository. Happy coding!!!
