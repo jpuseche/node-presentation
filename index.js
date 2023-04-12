@@ -13,7 +13,7 @@ app.engine("html", mustacheExpress());
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 
-app.use(express.static('public'))
+app.use(express.static('public'));
 
 //----------------------------------------- Lab Code Goes Here ----------------------------------------//
 

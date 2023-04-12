@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(241, 232, 182);
+    background-color: #F5F3C1;
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1, p, .p, a, .a {
@@ -67,8 +67,8 @@ h6, .h6 {
 
 .file-manager {
     margin-top: 250px;
-    background-color: rgb(103, 169, 83);
-    box-shadow: 5px 5px 5px rgb(71, 95, 58);
+    background-color: #2baf99;
+    box-shadow: 5px 5px 5px #175c51;
     border-radius: 10px;
     width: 25%;
 }
@@ -97,28 +97,32 @@ h6, .h6 {
 .btn {
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     border-radius: 5px;
-    border-color: rgb(125, 108, 10);
-    border: solid rgb(125, 108, 10);
-    background-color:rgb(227, 215, 145);
+    border-color: #959254;
+    border: solid #959254;
+    background-color:#F5F3C1;
     cursor: pointer;
-    color: rgb(125, 108, 10);
+    color: #959254;
     font-weight: bold;
 }
 
 .btn:active{
-    border-color: rgb(125, 108, 10);
-    border: solid rgb(125, 108, 10);
-    background-color:rgb(193, 178, 82);
+    border-color: #6e6e3f;
+    border: solid #6e6e3f;
+    background-color:#cac996;
     
     transition: all 0.2s;
 }
 
 textarea {
-    width: 10rem;
+    width: 100%;
     height: 15rem;
     margin-bottom: 20px;
 }
 
 select {
     width: 11rem;
+}
+
+video {
+    margin-top: 20px;
 }
