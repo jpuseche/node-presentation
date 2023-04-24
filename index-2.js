@@ -21,55 +21,80 @@ app.get("/", (req, res) => {
     res.render("home");
 });
 
-app.get("/create-view", (req, res) => {
+app.get("/create", (req, res) => {
     res.render("create");
 });
 
-app.post("/create-file", urlencodedParser, (req, res) => {
+app.post("/create", urlencodedParser, (req, res) => {
     if (!fs.existsSync("./files")) {
         fs.mkdirSync("./files");
     }
 
-    fs.createWriteStream(`./files/${req.body.filename}.txt`);
+    let fileName = `${req.body.filename}.txt`;
 
-    res.render("success", {message: `created ${req.body.filename}.txt successfully`});
+    let writeStream = fs.createWriteStream(`./files/${fileName}`);
+    writeStream.write(req.body.writeinput);
+    writeStream.end();
+    
+    res.render("success", {message: `se creo el archivo ${fileName}`});
 });
 
-app.get("/show-view", (req, res) => {
+app.get("/show", (req, res) => {
     let text_files = [];
+
+    if (!fs.existsSync("./files")) {
+        fs.mkdirSync("./files");
+    }
+
     text_files = fs.readdirSync("./files");
 
     res.render("show", {text_files: text_files});
 });
 
-app.get("/read-view", (req, res) => {
-    let text_files = [];
-    text_files = fs.readdirSync("./files");
-
-    res.render("read", {text_files: text_files});
-});
-
-app.post("/read-file", urlencodedParser, (req, res) => {
-    let readStream = fs.createReadStream(`./files/${req.body.filename}`);
-    readStream.on("data", (data) => {
-        res.render("success", {message: data});
-    });
-});
-
-app.get("/write-view", (req, res) => {
+app.get("/write", (req, res) => {
     let text_files = [];
     text_files = fs.readdirSync("./files");
 
     res.render("write", {text_files: text_files});
 });
 
-app.post("/write-file", urlencodedParser, (req, res) => {
-    fileName = req.body.filename;
+app.post("/write", urlencodedParser, (req, res) => {
+    let fileName = `${req.body.filename}`;
+
     let writeStream = fs.createWriteStream(`./files/${fileName}`);
-    message = writeStream.write(req.body.writeinput);
+    writeStream.write(req.body.writeinput);
     writeStream.end();
 
-    res.render("success", {message: `Se escribio correctament sobre el archivo ${fileName}`});
+    res.render("success", {message: `Se escribio sobre ${fileName}`});
+});
+
+app.get("/read", (req, res) => {
+    let text_files = fs.readdirSync("./files");
+
+    res.render("read", {text_files: text_files});
+});
+
+app.post("/read", urlencodedParser, (req, res) => {
+    let fileName = `${req.body.filename}`;
+
+    let readStream = fs.createReadStream(`./files/${fileName}`);
+    readStream.on("data", (data) => {
+        res.render("success", {message: data});
+    });
+});
+
+app.get("/delete", (req, res) => {
+    let text_files = fs.readdirSync("./files");
+
+    res.render("delete", {text_files: text_files});
+});
+
+app.post("/delete", urlencodedParser, (req, res) => {
+    let fileName = `${req.body.filename}`;
+
+    fs.rmSync(`./files/${fileName}`)
+
+    res.render("success", {message: `${fileName} eliminado con exito`});
 });
 
 app.listen(port, () => {
