@@ -13,7 +13,7 @@
                 <h1>Elimine un Archivo .txt</h1>
             </div>
             <div class="file-manager-content">
-                <form action="/delete-file" method="POST">
+                <form action="/delete" method="POST">
                     <p id="fileName">Nombre de Archivo:</p>
                     <select id="fileName" name="filename">
                         {{#text_files}}
@@ -22,12 +22,14 @@
                     </select>
                     <input class="btn" type="submit" value="Eliminar Archivo si existe">
                 </form>
-                <p>Opciones:</p>
-                <p><a href="/">Inicio</a></p>
-                <p><a href="/show-view">Ver Archivos</a></p>
-                <p><a href="/create-view">Crear Archivo</a></p>
-                <p><a href="/read-view">Leer Archivo</a></p>
-                <p><a href="/delete-view">Eliminar Archivo</a></p>
+                <div class="options">
+                    <p>Opciones:</p>
+                    <p><a href="/">Inicio</a></p>
+                    <p><a href="/show">Ver Archivos</a></p>
+                    <p><a href="/create">Crear Archivo</a></p>
+                    <p><a href="/read">Leer Archivo</a></p>
+                    <p><a href="/delete">Eliminar Archivo</a></p>
+                </div>
             </div>
         </div>
     </div>

@@ -1,5 +1,6 @@
 body {
     background-color: #F5F3C1;
+    margin: 0px;
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1, p, .p, a, .a {
@@ -63,14 +64,21 @@ h6, .h6 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 .file-manager {
-    margin-top: 250px;
     background-color: #2baf99;
     box-shadow: 5px 5px 5px #175c51;
     border-radius: 10px;
-    width: 25%;
+    width: 50rem;
+}
+@media (max-width: 840px) {
+    .file-manager {
+        width: 95%;
+    }
 }
 
 .file-manager-title {
@@ -87,11 +95,22 @@ h6, .h6 {
     padding: 2rem;
     display: flex;
     flex-direction: column;
-
 }
 
-.file-display{
-    text-align: center;
+.file-display {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #2F0F5D;
+    border: 2px solid #27E1C1;
+}
+
+.options {
+    margin-top: 15px;
+    padding-top: 20px;
+    border-top: 2px solid #23917e;
 }
 
 .btn {
@@ -105,12 +124,16 @@ h6, .h6 {
     font-weight: bold;
 }
 
-.btn:active{
+.btn:active {
     border-color: #6e6e3f;
     border: solid #6e6e3f;
     background-color:#cac996;
     
     transition: all 0.2s;
+}
+
+.input-text {
+    width: 16rem;
 }
 
 textarea {
@@ -120,7 +143,7 @@ textarea {
 }
 
 select {
-    width: 11rem;
+    width: 16rem;
 }
 
 video {

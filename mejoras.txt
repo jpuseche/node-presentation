@@ -1,0 +1,5 @@
+1. actualizar el readme.md
+2. juntar create y write
+3. no usar el test.js
+4. por que estoy explicando el event loop? los metodos http son callbacks que esperan a ser llamados.
+5. ir al grano
