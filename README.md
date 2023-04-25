@@ -33,7 +33,7 @@ With this you should be ready to attend the code along prepared for this reposit
 
 # Used Tools
 
-1. Html and css prestes: This repository contains pre-designed ui templates by its author, allowing the lab process to be quicker. 
+1. Html and css presets: This repository contains pre-designed ui templates by its author, allowing the lab process to be quicker. 
 
 2. Node.js: The runtime (environment) where we run javascript.
 
