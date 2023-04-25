@@ -147,6 +147,7 @@ textarea {
 }
 
 select {
+    font-size: calc(0.5rem + 0.8vw);
     width: 16rem;
 }
 
