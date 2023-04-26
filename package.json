@@ -5,7 +5,8 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "result": "nodemon result.js"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"

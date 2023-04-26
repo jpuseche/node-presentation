@@ -31,6 +31,14 @@ This is the repository for Juan Useche's node.js file manage system presentation
 
 With this you should be ready to attend the code along prepared for this repository. Happy coding!!!
 
+# Run resolved project
+
+You can check the fully finished code for this project in the result.js file.
+If you want to run that file, you only need to use the command: 
+```
+npm run result
+```
+
 # Used Tools
 
 1. Html and css presets: This repository contains pre-designed ui templates by its author, allowing the lab process to be quicker. 
